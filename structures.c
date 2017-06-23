@@ -930,6 +930,9 @@ void tglf_fetch_document_attribute (struct tgl_state *TLS, struct tgl_document *
   case CODE_document_attribute_filename:
     D->caption = DS_STR_DUP (DS_DA->file_name);
     return;
+   case CODE_message_media_unsupported:
+    M->type = tgl_message_media_unsupported;
+    break;
   default:
     assert (0);
   }
